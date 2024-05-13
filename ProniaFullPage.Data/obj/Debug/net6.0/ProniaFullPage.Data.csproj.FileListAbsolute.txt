@@ -1,0 +1,17 @@
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\bin\Debug\net6.0\ProniaFullPage.Data.deps.json
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\bin\Debug\net6.0\ProniaFullPage.Data.runtimeconfig.json
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\bin\Debug\net6.0\ProniaFullPage.Data.dll
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\bin\Debug\net6.0\ProniaFullPage.Data.pdb
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\bin\Debug\net6.0\ProniaFullPage.Core.dll
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\bin\Debug\net6.0\ProniaFullPage.Core.pdb
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.csproj.AssemblyReference.cache
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.AssemblyInfoInputs.cache
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.AssemblyInfo.cs
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.csproj.CoreCompileInputs.cache
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFu.C99EDBCC.Up2Date
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.dll
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\refint\ProniaFullPage.Data.dll
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.pdb
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.genruntimeconfig.cache
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ref\ProniaFullPage.Data.dll

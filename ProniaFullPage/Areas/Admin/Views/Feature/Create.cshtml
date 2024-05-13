@@ -1,0 +1,25 @@
+﻿@model Feature
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form asp-action="Create" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Icon</label>
+                    <input type="text" asp-for="Icon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                   
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Title</label>
+                    <input type="text" asp-for="Title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Description</label>
+                    <textarea rows="5" asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
