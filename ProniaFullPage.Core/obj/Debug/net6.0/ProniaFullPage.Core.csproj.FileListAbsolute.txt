@@ -10,3 +10,4 @@ C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Core\obj\Debug\ne
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Core\obj\Debug\net6.0\refint\ProniaFullPage.Core.dll
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Core\obj\Debug\net6.0\ProniaFullPage.Core.pdb
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Core\obj\Debug\net6.0\ref\ProniaFullPage.Core.dll
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Core\obj\Debug\net6.0\ProniaFullPage.Core.sourcelink.json

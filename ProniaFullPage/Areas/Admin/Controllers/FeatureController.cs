@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ProniaFullPage.Business.Abstract;
+using ProniaFullPage.Business.Exceptions;
 using ProniaFullPage.Core.Models;
 
 namespace ProniaFullPage.Areas.Admin.Controllers
@@ -31,7 +32,21 @@ namespace ProniaFullPage.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-            _featureService.AddAsyncFeature(feature);
+            try
+            {
+
+                _featureService.AddAsyncFeature(feature);
+
+            }
+            catch (DublicateException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return RedirectToAction("Index");
         }
 
@@ -49,7 +64,18 @@ namespace ProniaFullPage.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult DeletePost(int id)
         {
-            _featureService.DeleteFeature(id);
+            try
+            {
+                _featureService.DeleteFeature(id);
+            }
+            catch(NullReferenceException ex)
+            {
+                return NotFound();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return RedirectToAction("Index");
         }
 
@@ -69,8 +95,22 @@ namespace ProniaFullPage.Areas.Admin.Controllers
         {
             if(!ModelState.IsValid)
                 return View();
+            
 
-            _featureService.UpdateFeature(id, feature);
+            try
+            {
+                _featureService.UpdateFeature(id, feature);
+            }
+            catch (NullReferenceException ex)
+            {
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+
             return RedirectToAction("Index");
         }
 

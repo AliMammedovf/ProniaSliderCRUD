@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ProniaFullPage.Business.Abstract;
+using ProniaFullPage.Business.Exceptions;
 using ProniaFullPage.Core.Models;
 
 namespace ProniaFullPage.Areas.Admin.Controllers
@@ -26,10 +28,41 @@ namespace ProniaFullPage.Areas.Admin.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Create(Slider slider)
-        { 
+        {
+            if(!ModelState.IsValid)
+                return View();
 
-             await _sliderService.AddAsyncSlider(slider);
-             return RedirectToAction("Index");
+          
+            try
+            {
+
+                await _sliderService.AddAsyncSlider(slider);
+            }
+            catch (ImageContentTypeException ex)
+            {
+                ModelState.AddModelError("ImageFile", ex.Message);
+                return View();
+
+            }
+            catch (ImageSizeException ex)
+            {
+                ModelState.AddModelError("ImageFile", ex.Message);
+                return View();
+
+            }
+            catch (FileNullReferanceException ex)
+            {
+                ModelState.AddModelError("ImageFile", ex.Message);
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+                
+
+            }
+
+            return RedirectToAction("Index");
         }
 
         public IActionResult Delete(int id)
@@ -45,7 +78,23 @@ namespace ProniaFullPage.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult DeletePost(int id)
         {
-            _sliderService.DeleteSlider(id);
+            try
+            {
+                _sliderService.DeleteSlider(id);
+            }
+            catch (NotFoundIdException ex)
+            {
+                return NotFound();
+            }
+            catch(NotFoundFileException ex)
+            {
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
             return RedirectToAction("Index");
         }
 
@@ -60,12 +109,35 @@ namespace ProniaFullPage.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(int id, Slider newSlider)
+        public IActionResult Update(Slider newSlider)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            _sliderService.UpdateSlider(id, newSlider);
+            try
+            {
+                _sliderService.UpdateSlider(newSlider.Id, newSlider);
+            }
+            catch(NullReferenceException ex)
+            {
+                ModelState.AddModelError("ImageFile", ex.Message);
+            }
+            catch(ImageContentTypeException ex)
+            {
+                ModelState.AddModelError("ImageFile", ex.Message);
+            }
+            catch(ImageSizeException ex)
+            {
+                ModelState.AddModelError("ImageFile", ex.Message);
+            }
+            catch(FileNotFoundException ex)
+            {
+                return NotFound();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return RedirectToAction("Index");
         }
 

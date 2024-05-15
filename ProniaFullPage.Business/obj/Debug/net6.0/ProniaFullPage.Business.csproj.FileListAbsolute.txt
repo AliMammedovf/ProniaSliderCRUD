@@ -15,3 +15,4 @@ C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Business\obj\Debu
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Business\obj\Debug\net6.0\refint\ProniaFullPage.Business.dll
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Business\obj\Debug\net6.0\ProniaFullPage.Business.pdb
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Business\obj\Debug\net6.0\ref\ProniaFullPage.Business.dll
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Business\obj\Debug\net6.0\ProniaFullPage.Business.sourcelink.json

@@ -21,11 +21,11 @@ namespace ProniaFullPage.Core.Models
 
         public string? RedirectUrl { get; set; }
 
-        [Required]
-        public string ImageURL { get; set; }
+       
+        public string? ImageURL { get; set; }
 
-        [Required]
+       
         [NotMapped]
-        public IFormFile ImageFile { get; set; }
+        public IFormFile? ImageFile { get; set; }
     }
 }

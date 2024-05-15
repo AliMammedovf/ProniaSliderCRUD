@@ -544,3 +544,4 @@ C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage\bin\Debug\net6.0\
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage\obj\Debug\net6.0\ProniaFullPage.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage\obj\Debug\net6.0\ProniaFullPage.sourcelink.json

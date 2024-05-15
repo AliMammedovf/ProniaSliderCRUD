@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProniaFullPage.Business.Abstract;
+using ProniaFullPage.Business.Exceptions;
 using ProniaFullPage.Core.Models;
 
 namespace ProniaFullPage.Areas.Admin.Controllers
@@ -31,7 +32,19 @@ namespace ProniaFullPage.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-            _categoryService.AddAsyncCategory(category);
+            try
+            {
+                _categoryService.AddAsyncCategory(category);
+            }
+            catch(DublicateException ex)
+            {
+                ModelState.AddModelError("Name",ex.Message);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
             return RedirectToAction("Index");   
         }
 
@@ -50,7 +63,18 @@ namespace ProniaFullPage.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult DeletePost(int id)
         {
-            _categoryService.DeleteCategory(id);
+            try
+            {
+                _categoryService.DeleteCategory(id);
+            }
+            catch(NullReferenceException ex)
+            {
+                return NotFound();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
 
             return RedirectToAction("Index");
         }
@@ -66,12 +90,29 @@ namespace ProniaFullPage.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(int id, Category category)
+        public IActionResult Update( Category category)
         {
             if(!ModelState.IsValid)
                 return View();
 
-            _categoryService.UpdateCategory(id, category);
+            try
+            {
+                _categoryService.UpdateCategory(category.Id, category);
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+            catch(DublicateException ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+
             return RedirectToAction("Index");
         }
 

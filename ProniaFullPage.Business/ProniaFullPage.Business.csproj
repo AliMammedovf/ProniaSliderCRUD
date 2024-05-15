@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProniaFullPage.Data\ProniaFullPage.Data.csproj" />
+	  <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+
 
 </Project>

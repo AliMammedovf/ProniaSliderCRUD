@@ -3795,7 +3795,10 @@
         },
         "runtime": {
           "bin/placeholder/ProniaFullPage.Business.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "ProniaFullPage.Core/1.0.0": {
         "type": "project",

@@ -15,3 +15,4 @@ C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\ne
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.pdb
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.genruntimeconfig.cache
 C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ref\ProniaFullPage.Data.dll
+C:\Users\V&V\Desktop\CodeAcademy\ProniaFullPage\ProniaFullPage.Data\obj\Debug\net6.0\ProniaFullPage.Data.sourcelink.json

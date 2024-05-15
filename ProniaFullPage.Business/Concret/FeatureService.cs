@@ -33,7 +33,7 @@ namespace ProniaFullPage.Business.Concret
         public void DeleteFeature(int id)
         {
            var exsist= _featureRepository.Get(x=>x.Id==id);
-            if (exsist == null) throw new NullReferenceException();
+            if (exsist == null) throw new NullReferenceException("Id movcud deyil!");
 
             _featureRepository.Delete(exsist);
             _featureRepository.Commit();
@@ -53,7 +53,7 @@ namespace ProniaFullPage.Business.Concret
         {
             var oldFeature=_featureRepository.Get(x=> x.Id==id);
 
-            if(oldFeature == null) throw new NullReferenceException();
+            if(oldFeature == null) throw new NullReferenceException("Id movcud deyl!");
 
             if(!_featureRepository.GetAll().Any(x => x.Title == feature.Title))
             {

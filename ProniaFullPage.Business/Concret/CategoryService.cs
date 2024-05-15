@@ -34,7 +34,7 @@ namespace ProniaFullPage.Business.Concret
         {
             var exsist=_categoryRepository.Get(x=>x.Id == id);
 
-            if (exsist == null) throw new NullReferenceException();
+            if (exsist == null) throw new NullReferenceException("Id movcud deyil!");
 
             _categoryRepository.Delete(exsist);
             _categoryRepository.Commit();
@@ -54,7 +54,7 @@ namespace ProniaFullPage.Business.Concret
         {
             var oldCategory= _categoryRepository.Get(x=> x.Id == id);
 
-            if (oldCategory == null) throw new NullReferenceException();
+            if (oldCategory == null) throw new NullReferenceException("Id movcud deyil!");
 
             
 
